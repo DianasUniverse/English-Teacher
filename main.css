@@ -1,0 +1,620 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(180deg,#00E5C7 0%,#00BCD5 100%);
+}
+.page {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr minmax(15rem,2fr) minmax(25rem,3fr) 1fr;
+  grid-template-rows: 1fr minmax(35rem,2fr) 1fr;
+  justify-content: center;
+  align-content: center;
+  padding: 2rem 0;
+}
+nav {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.nav-menu {
+  margin-top: 2rem;
+}
+.nav-menu li a {
+  text-decoration: none;
+  color: #FFF;
+  cursor:url('http://csscursor.info/source/santahand.png'), default;
+}
+.nav-menu li {
+  display: inline;
+  list-style: none;
+  padding: 0.6rem 1.5rem;
+  margin: 4rem 1rem 1rem 1rem;
+  border-radius: 10px;
+	font-family: 'Pacifico', cursive;
+	font-size: 2.2vw;
+	color: #FFF;
+	text-decoration: none;
+  background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	text-shadow: 0px -2px #2980B9;
+  transition: all 0.1s;
+	-webkit-transition: all 0.2s;
+  /* cursor: pointer; */
+  cursor:url('http://csscursor.info/source/santahand.png'), default;
+}
+.nav-menu li:hover,
+.nav-menu li:focus {
+   box-shadow:0px 2px 10px 5px #97B1BF;
+}
+.nav-menu li:active {
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+.name {
+  background-color: #2980B9;
+  margin: 2rem 0 3rem 0;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  border-radius: 20px;
+  box-shadow: 4px 2px 8px -4px rgba(0,0,0,0.75);
+  display:grid;
+  grid-template-rows: 1fr 0.3fr 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+.img-div {
+  background-color: aqua;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  z-index: 1;
+  margin: 1rem -4rem 4rem 0;
+  outline: solid 1px white;
+  outline-offset: -0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.rama {
+  margin: 0.5rem;
+  grid-column: 1;
+  grid-row: 1;
+  background-image: url('img/teacher2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s ease-in;
+}
+.rama:hover {
+  box-shadow: inset 0 0 0 15px white;
+  transform: scale(0.98, 0.98);
+}
+.teacher-name h1{
+  grid-row: 1 / 2;
+  margin: 3rem 0 0 4rem;
+  padding-bottom: 1rem;
+  font-size: 5vw;
+  font-family: 'Courgette', cursive;
+}
+.tilda {
+  grid-row: 2 / 3;
+  margin: 2rem 2rem 0 11rem;
+}
+.ornament {
+	fill: rgba(255, 255, 255, 1);
+}
+.ornamentCont {
+	width: 18vw;
+}
+.profesion h3 {
+  grid-row: 3 / 4;
+  margin: 1rem 5rem 0 8rem;
+  font-size: 3.2vw;
+  letter-spacing: 4px;
+  font-family: 'Great Vibes', cursive;
+}
+.teacher-name h1, .profesion h3, .tilda h1 {
+  color: white;
+  text-align: center;
+}
+section {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+section .services {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  align-content: space-between;
+  list-style: none;
+  text-align: center;
+  transform: translatez(0);
+  margin: 2rem 4rem 0 2rem;
+}
+.services li:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1 / 2;
+}
+.services li:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2 / 3;
+}
+.services li:nth-child(3) {
+  grid-column: 1;
+  grid-row: 3 / 4;
+}
+.services li:nth-child(4) {
+  grid-column: 1;
+  grid-row: 4 / 5;
+}
+section .services li {
+  margin: 1.2rem;
+  list-style: none;
+}
+section .services li div {
+  /* cursor: pointer; */
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+  box-shadow: 4px 2px 8px -4px rgba(0,0,0,0.75);
+  transition: all 0.5s ease;
+  border-radius: 100px;
+  cursor:url('http://csscursor.info/source/santahand.png'), default;
+}
+section .services li a {
+  color: #fff;
+}
+.facebook {
+  background-color: #3b5998;
+}
+.twitter {
+  background-color: #1da1f2;
+}
+.instagram {
+  background-color: #6291b2;
+}
+.skype {
+  background-color: #00AFF0;
+}
+.services .fa {
+  font-size: 3rem
+}
+section .services li div:hover,
+section .services li div:focus {
+  transform: rotate(360deg);
+}
+/* --------------------------
+      CONTACT PAGE
+-----------------------------*/
+.contacte {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  background-color: #2980B9;
+  border-radius: 20px;
+  box-shadow: 4px 2px 8px -4px rgba(0,0,0,0.75);
+  margin: 2rem 0 3rem 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.contact-info {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.map {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.contacte .contact-info h3 {
+  text-align: center;
+  font-size: 3vw;
+  letter-spacing: .5px;
+  text-decoration: underline solid #00A3E1;
+  font-family: 'Courgette', cursive;
+  color: #fff;
+}
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  color: white;
+  align-content: space-between;
+  justify-content: space-between;
+}
+.adrress-div, .email-div {
+  margin: auto;
+  padding: 0 6rem;
+  font-family: 'Courgette', cursive;
+  text-align: center;
+  font-size: 1.3vw;
+}
+.icon {
+  font-size: 3vw;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5em;
+}
+/* ----------------------------
+      ENGLISH LESSONS PAGE
+-------------------------------*/
+.lessons {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  background-color: #2980B9;
+  border-radius: 20px;
+  box-shadow: 4px 2px 8px -4px rgba(0,0,0,0.75);
+  margin: 2rem 0 3rem 0;
+  display: grid;
+  grid-template-rows: 0.3fr 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.lessons h3 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  text-align: center;
+  font-size: 3vw;
+  letter-spacing: .5px;
+  font-family: 'Courgette', cursive;
+  color: #fff;
+  margin: 1.5rem;
+}
+.allcards {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  height: 100%;
+}
+figure.snip1, figure.snip2, figure.snip3 {
+  font-family: 'Courgette', cursive;
+  color: #fff;
+  overflow: hidden;
+  height: 350px;
+  background: #000000;
+  text-align: center;
+  border-radius: 20px;
+  align-self: center;
+  margin: 1rem;
+}
+figure.snip1 img, figure.snip2 img, figure.snip3 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+  object-fit: cover;
+}
+figure.snip1 figcaption .chenar, figure.snip2 figcaption .chenar,
+figure.snip3 figcaption .chenar {
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  /* content: ''; */
+  opacity: 0;
+  background-color: #ffffff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+  margin: -21rem 2rem;
+}
+figure.snip1 .chenar h1, figure.snip2 .chenar h1, figure.snip3 .chenar h1 {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+  word-spacing: -0.15em;
+  font-size: 3vw;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(0%, 50%, 0);
+  transform: translate3d(0%, 50%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  padding: 3rem 0;
+}
+figure.snip2 .chenar h1 {
+  font-size: 2.3vw;
+}
+figure.snip1:hover img, figure.snip2:hover img, figure.snip3:hover img {
+  opacity: 0.35;
+}
+figure.snip1:hover figcaption .chenar h1, figure.snip2:hover figcaption .chenar h1,
+figure.snip3:hover figcaption .chenar h1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip1:hover figcaption .chenar, figure.snip2:hover figcaption .chenar,
+figure.snip3:hover figcaption .chenar {
+  background: rgba(255, 255, 255, 0);
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+/* ----------- iPad 1, 2, Mini and Air, 3, 4 and Pro 9.7"----------- */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px)
+  and (orientation: landscape) {
+  section .services {
+    margin: 8rem 4rem 0 2rem;
+  }
+  section .services li div {
+    width: 130px;
+    height: 130px;
+  }
+  .services .fa {
+    font-size: 5rem;
+    margin-top: 1.5rem;
+  }
+  .tilda {
+    margin: 2rem 2rem 0 16rem;
+  }
+  .nav-menu li {
+    font-size: 3vw;
+  }
+  .contacte .contact-info h3 {
+    padding-bottom: 3rem;
+    font-size: 3.3vw;
+    margin-top: 6rem;
+  }
+  .adrress-div, .email-div {
+    padding: 0 9rem;
+    font-size: 1.6vw;
+  }
+  .container {
+    padding-bottom: 4rem;
+  }
+  .contacte, .lessons {
+    grid-row: 2 / 4;
+  }
+  .lessons h3 {
+    font-size: 3.3vw;
+  }
+  .allcards {
+    margin: 0 2rem;
+  }
+  figure.snip1, figure.snip2, figure.snip3 {
+    height: 730px;
+    margin: 0 1.5rem 3.5rem 1.5rem;
+  }
+  .map iframe {
+    width: 1400px;
+    height: 400px;
+  }
+  figure.snip1 img, figure.snip2 img, figure.snip3 img {
+    height: 100%;
+  }
+  figure.snip1 figcaption .chenar, figure.snip2 figcaption .chenar, figure.snip3 figcaption .chenar {
+    margin: -31rem 2rem;
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px)
+  and (orientation: portrait) {
+    section .services li div {
+      width: 150px;
+      height: 150px;
+      font-size: 7.5rem;
+    }
+    .services .fa {
+      font-size: 6rem;
+    }
+    section .services {
+      margin: 6rem 4rem 0 2rem;
+    }
+    .nav-menu {
+      margin: 2rem 0;
+    }
+    .nav-menu li {
+      font-size: 3vw;
+    }
+    .allcards {
+      margin: 0 1rem;
+    }
+    figure.snip1, figure.snip2, figure.snip3 {
+      width: 280px;
+      height: 650px;
+      margin: -2rem 1.5rem 1.5rem 1rem;
+    }
+    .lessons h3 {
+      font-size: 3.3vw;
+    }
+    .container {
+      padding-top: 5rem;
+    }
+    .adrress-div, .email-div {
+      padding: 0 8rem;
+    }
+    .map iframe {
+      width: 950px;
+      height: 410px;
+    }
+    figure.snip1 img, figure.snip2 img, figure.snip3 img {
+      height: 100%;
+    }
+    figure.snip1 figcaption .chenar, figure.snip2 figcaption .chenar, figure.snip3 figcaption .chenar {
+      margin: -28rem 2rem;
+    }
+  }
+  /* ----------- iPad Pro 12.9" -----------
+  Declared the same value for min- and max-width to avoid colliding with desktops */
+  @media screen and (min-device-width: 1366px) and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .nav-menu {
+      margin: 2rem;
+    }
+    .name {
+      margin: 2rem 0 1rem -3rem;
+    }
+    .img-div {
+      margin: -1.5rem -5rem 3rem 0;
+    }
+    .rama {
+      margin: 1rem;
+    }
+    .tilda {
+      margin: 5rem 2rem 0 25rem;
+    }
+    .teacher-name h1 {
+      margin: 6rem 0 0 4rem;
+    }
+    section .services li div {
+      width: 150px;
+      height: 150px;
+      font-size: 7.5rem;
+    }
+    .services .fa {
+      font-size: 6rem;
+    }
+    section .services {
+      margin: 4rem 4rem 0 2rem;
+    }
+    .adrress-div, .email-div {
+      padding: 0 15rem;
+    }
+    .map iframe {
+      width: 1900px;
+      height: 330px;
+    }
+    figure.snip1, figure.snip2, figure.snip3 {
+      height: 640px;
+      margin: 1rem 4rem;
+    }
+    figure.snip1 figcaption .chenar, figure.snip2 figcaption .chenar, figure.snip3 figcaption .chenar {
+      margin: -33rem 2rem;
+    }
+  }
+  /* ----------- iPad Pro 12.9" -----------
+  Declared the same value for min- and max-width to avoid colliding with desktops */
+  @media screen and (min-device-width: 1024px) and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .img-div {
+      margin: 1rem -6rem 5rem 0;
+    }
+    section .services li {
+      margin: 2rem;
+    }
+    .tilda {
+      margin: 2rem 2rem 0 17rem;
+    }
+    .adrress-div, .email-div {
+      padding: 0 10rem;
+    }
+    .map iframe {
+      width: 1350px;
+      height: 570px;
+    }
+    figure.snip1, figure.snip2, figure.snip3 {
+      height: 840px;
+      width: 380px;
+      margin: 1rem 2rem;
+    }
+    figure.snip1 img, figure.snip2 img, figure.snip3 img {
+      height: 100%;
+    }
+    figure.snip1 figcaption .chenar, figure.snip2 figcaption .chenar, figure.snip3 figcaption .chenar {
+      margin: -35rem 2rem;
+    }
+  }
+  /* ----------- Mobile Phones -----------  */
+  @media screen and (min-device-width: 320px) and (max-device-width: 767px){
+    .page {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr minmax(1fr, 2fr) 1fr;
+    }
+    nav {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-menu {
+      margin: 7rem 0.7rem 0 0;
+    }
+    .nav-menu li {
+      font-size: 4.4vw;
+    }
+    .name {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      margin: 0 1rem 0 -5rem;
+    }
+    .img-div {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      margin: 1rem -1rem 1.5rem 1rem;
+    }
+    .teacher-name h1 {
+      margin: 3rem 0 0 5.5rem;
+      font-size: 7vw;
+    }
+    .profesion h3 {
+      margin: 1rem 1rem 0 6.5rem;
+      font-size: 5.5vw;
+    }
+    .ornamentCont {
+      width: 30vw;
+    }
+    .tilda {
+      margin: 2rem 0 0 9rem;
+    }
+    section {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+    }
+    section .services {
+      display: inline-block;
+      margin: 4rem 0 0 4rem;
+    }
+    section .services li {
+      margin: 1.2rem;
+      list-style: none;
+      display: inline-block;
+    }
+    .contacte, .lessons {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      margin: 0 1rem;
+    }
+    .contacte .contact-info h3 {
+      font-size: 5vw;
+      padding-bottom: 1rem;
+    }
+    .adrress-div, .email-div {
+      padding: 0 3rem;
+      font-size: 2.5vw;
+    }
+    .icon {
+      font-size: 5vw;
+    }
+    .lessons h3 {
+      font-size: 4.5vw;
+      padding: 2rem 0;
+    }
+    figure.snip1, figure.snip2, figure.snip3 {
+      height: 400px;
+      margin: -2rem 1rem 1rem 1rem;
+    }
+    figure.snip1 img, figure.snip2 img, figure.snip3 img {
+      height: 100%;
+    }
+    figure.snip1 figcaption .chenar, figure.snip2 figcaption .chenar, figure.snip3 figcaption .chenar {
+      margin: -18rem 2rem;
+    }
+    .map iframe {
+      width: 650px;
+      height: 280px;
+    }
+  }
